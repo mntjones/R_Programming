@@ -1,0 +1,36 @@
+CODE TO TEST
+
+## data frame with all instances of non-NA pollutant reporting, used rbind to create, 
+## used complete cases to get df with no NAs
+
+1
+1
+1
+1
+1
+1
+2
+2
+2
+2
+2
+2
+3
+3
+4
+4
+4
+4
+
+numCases <- c()
+listID <- c()
+finalDF <- data.frame()
+
+for (i in id) {		## creates a vector containing number of complete cases per id number
+	lendf <- subset(df$id, df$id == i)
+	numCases <- append.numCases(length(lendf))
+	## listID <- append.listID(i)
+	finalDF <- rbind(data.frame[i, numCases])	
+}
+	
+## finalDF <- cbind.data.frame(listID, numCases)
