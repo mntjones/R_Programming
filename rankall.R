@@ -13,8 +13,6 @@ rankall <- function (outcome, num = "best") {
 
     for (i in 1:length(state_list)) {
         st_data <- rank[grep(state_list[i],rank$state),]
-        print(st_data)
-        orderdata <- st_data[order(st_data[,outCol]),]
         
         if (num == "best") {
             rownum = 1
@@ -25,6 +23,5 @@ rankall <- function (outcome, num = "best") {
         
         rank_vector <- append(rank_vector, as.character(orderdata[rownum,1]))
         rank_vector <- append(rank_vector, as.character(state_list[i]))
-        print(rownum)
         rownum <- num
     }
